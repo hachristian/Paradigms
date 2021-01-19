@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+<script type="text/javascript"> 
+class foo
+{
+	constructor(x, y)
+	{
+		this.x = x;
+		this.x = y;
+	}
+
+	getX()
+	{
+		return this.x;
+	}
+
+	getY()
+	{
+		return this.y;
+	}
+}
+
+class bar extends foo
+{
+	constructor(x, y)
+	{
+		super(x, y);
+		let h = 100;
+	}
+}
+let chicken = new foo(100, 100);
+let nuggets = new bar(120, 120);
+let temp = chicken.getX();
+console.log("chicken x = " + temp);
+let temp2 = chicken.getY();
+console.log("chicken y = " + temp);
+</script>
+</body>
+</html>

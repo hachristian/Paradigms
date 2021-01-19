@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript"> 
+        function correct(question) {
+
+            if (question == 1) {
+                document.getElementById("answer1").style.display = "block";
+                document.getElementById("answer1").innerHTML = "Correct!";
+            }
+            if (question == 2) {
+                document.getElementById("answer2").style.display = "block";
+                document.getElementById("answer2").innerHTML = "Correct!";
+            }
+            if (question == 3) {
+                document.getElementById("answer3").style.display = "block";
+                document.getElementById("answer3").innerHTML = "Correct!";
+            }
+        }
+
+        function wrong(question) {
+
+            if (question == 1) {
+                document.getElementById("answer1").style.display = "block";
+                document.getElementById("answer1").innerHTML = "Wrong!";
+            }
+            if (question == 2) {
+                document.getElementById("answer2").style.display = "block";
+                document.getElementById("answer2").innerHTML = "Wrong!";
+            }
+            if (question == 3) {
+                document.getElementById("answer3").style.display = "block";
+                document.getElementById("answer3").innerHTML = "Wrong!";
+            }
+        }
+
+        function reset() {
+            document.getElementById("answer1").style.display = "none";
+            document.getElementById("answer2").style.display = "none";
+            document.getElementById("answer3").style.display = "none";
+
+        }
+    </script>
+
+    <title>Julio Sibrian's page</title>
+
+    <body style="background-color:cadetblue;">
+        <h1>Julio Sibrian's page</h1>
+        <p>
+            This quiz will be about the country El Salvador the following link can help you with the quiz -> 
+            <a href="https://en.wikipedia.org/wiki/History_of_El_Salvador#:~:text=The%20history%20of%20El%20Salvador%20begins%20with%20several%20Mesoamerican%20nations,Spain%20ruled%20from%20Mexico%20City." target="_blank">El Salvador</a>
+        </p>
+        <ul>
+            <li>Question 1: When did the Salvadoran Civil War end?</li>
+            <p>
+                <input type="button" onclick="correct(1);" value="A)">
+                1992
+                <br>
+                <input type="button" onclick="wrong(1);" value="B)">
+                1980
+                <br>
+                <input type="button" onclick="wrong(1);" value="C)">
+                2001
+            </p>
+            <div id="answer1"></div>
+            <li>Question 2: In El Salvador what volcano erupted in 1891?</li>
+            <p>
+                <input type="button" onclick="wrong(2);" value="A)">
+                Mount Vesuvius
+                <br>
+                <input type="button" onclick="correct(2);" value="B)">
+                Ilopango
+                <br>
+                <input type="button" onclick="wrong(2);" value="C)">
+                Krakatoa
+            </p>
+            <div id="answer2"></div>
+            <li>Question 3: Which of these is the flag of El Salvador?</li>
+            <p>
+                <input type="button" onclick="wrong(3);" value="A)">
+                <br>
+                <img src="Gibraltar.png" style="width:220px;height:124px;"> 
+                <br>
+                <input type="button" onclick="correct(3);" value="B)">
+                <br>
+                <img src="ElSalvador.png" style="width:220px;height:124px;">
+                <br>
+                <input type="button" onclick="wrong(3);" value="C)">
+                <br>
+                <img src="SouthKorea.png" style="width:220px;height:124px;">
+            </p>
+            <div id="answer3"></div>
+        </ul>
+        <input type="button" onclick="reset()" value="reset">
+    </body>
+</html>
